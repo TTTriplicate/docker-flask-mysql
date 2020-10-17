@@ -1,0 +1,13 @@
+CREATE DATABASE InCognito;
+
+use InCognito;
+
+CREATE TABLE USERS(
+    ID int PRIMARY KEY NOT NULL,
+    username VARCHAR(40)
+);
+
+INSERT INTO USERS VALUES(1, 'TTTriplicate');
+
+CREATE USER 'API'@'%' IDENTIFIED BY 'G3n3r1cP@ssw0rd!';
+GRANT SELECT, INSERT, DELETE on InCognito.* to 'API'@'%';

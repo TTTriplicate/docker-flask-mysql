@@ -1,0 +1,15 @@
+services:
+        app:
+                image: flask-test-server:v1
+                ports:
+                        - "80:80"
+                links:
+                        - mysql
+        mysql:
+                image: mysql:latest
+                ports:
+                        - "3306:3306"
+                environment:
+                        MYSQL_ROOT_PASSWORD: G3n3r1cP@ssw0rd!
+                volumes:
+                        - ./db:/docker-entrypoint-initdb.d/
