@@ -1,6 +1,6 @@
 services:
         app:
-                image: flask-test-server:v1
+                image: tttriplicate/flask-test-server:js-cors
                 ports:
                         - "80:80"
                 links:
