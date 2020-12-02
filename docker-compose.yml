@@ -1,6 +1,6 @@
 services:
         app:
-                image: tttriplicate/flask-test-server:js-cors
+                image: tttriplicate/flask-test-server:incognito
                 ports:
                         - "80:80"
                 links:
